@@ -46,3 +46,8 @@ function solution(today, terms, privacies) {
     }
     return answer;
 }
+
+/* 복기
+Date 자료형이 있다는 걸 잊지 말자. 괜히 복잡하게 풀었어...
+배열에 대해 루프를 돌릴 때는 foreach를 적극적으로 활용해보자!
+*/
