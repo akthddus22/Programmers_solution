@@ -51,3 +51,7 @@ function solution(wallpaper) {
     
     return answer;
 }
+
+/* 복기
+Function.prototype.apply(null, array)를 기억하자. 함수의 인자를 array 형식으로 넣을 수 있게 해줌. null 자리에는 함수 내부에서 this로 호출하는 객체를 넣을 수 있다.
+*/
