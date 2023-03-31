@@ -61,6 +61,7 @@ function solution(cap, n, deliveries, pickups) {
     return answer;
 }
 
-/* 
-
+/* 복기
+사실 몇몇 테스트케이스는 통과하지 못했다. 다른 게 아니라 시간초과 때문에...
+Push와 Pop을 적극 이용해서 다시 풀어볼 생각이다.
 */
