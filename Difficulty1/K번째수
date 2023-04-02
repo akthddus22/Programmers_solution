@@ -1,0 +1,17 @@
+function solution(array, commands) {
+    var answer = [];
+    
+    for (let i = 0; i < commands.length; i++) {
+        let command = commands[i];
+        let sliced = array.slice(command[0]-1, command[1]);
+        sliced = sliced.sort((a, b) => { return a - b });
+        answer.push(sliced[command[2]-1]);
+    }
+    return answer;
+}
+
+/* 복기
+기본적인 sort 문제다.
+배열 함수 중 slice와 splice의 차이점에 대해 기억해두자.
+slice는 원본 배열의 값에 영향을 주지 않지만, splice는 잘라낸 값을 없애버린다!
+*/
