@@ -1,0 +1,24 @@
+function solution(number, k) {
+    if (k==0){
+        return number;
+    } else if (number.length==k) {
+        return "";
+    } else {
+        let max_char = number.charAt(0);
+        let max_ind = 0;
+        for (let i = 1; i<=k; i++) {
+            let temp_char = number.charAt(i);
+            if (temp_char > max_char) {
+                max_char = temp_char;
+                max_ind = i;
+            }
+        }
+        return max_char+solution(number.slice(max_ind+1, number.length), k-max_ind);
+    }
+}
+
+/* 복기
+10번 테스트케이스에서 런타임 에러가 뜬다. 아무리 생각해도 별로 틀릴만한 부분이 없는데.
+찾아보니 코딩테스트에서 재귀 함수는 어지간하면 쓰지 않는 편이 좋다더라.
+하긴 시간이나 용량을 많이 잡아먹으니... 재귀를 쓰지 않은 버전으로 다시 풀어보자.
+*/
